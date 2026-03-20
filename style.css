@@ -188,3 +188,38 @@ header {
     gap: 10px;
     margin-bottom: 10px;
 }
+
+/* ===================== MOBILE-FRIENDLY FIX ===================== */
+@media (max-width: 480px), (hover: none) {
+    /* Stack input and add button */
+    .input-group {
+        flex-direction: column;
+    }
+
+    #taskInput,
+    #addBtn {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Task items smaller */
+    li {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    /* Always show edit & delete buttons on touch/mobile */
+    li > .listButtons > button {
+        opacity: 1 !important;
+        pointer-events: auto;
+        font-size: 16px;
+        padding: 5px 8px;
+    }
+
+    /* Filter buttons smaller on mobile */
+    .filters button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
