@@ -1,0 +1,190 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+.app {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.task-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+/* Input and add button */
+#taskInput {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#addBtn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+}
+
+/* Filter button */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.filters button {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.filters button.active {
+    background: black;
+    color: white;
+}
+
+span {
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+span:hover {
+    opacity: 0.8;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+li button{
+    opacity: 0;    
+    transition: opacity 0.2s ease;
+}
+
+li:hover button{
+    opacity: 1;
+}
+
+button {
+    cursor: pointer;
+}
+
+#taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* vertical spacing between tasks */
+    padding: 10px;
+    list-style: decimal;
+}
+
+
+
+.editing {
+    background-color: #f0f0f0;
+}
+
+.editing input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/* Transitions */
+li {
+    /* Style */
+    background: #fafafa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    /* Animation */
+    margin-left: 20px;
+    transition: all 0.2s ease;
+    animation: fadeIn 0.2s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Toggle dark mode */
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark .task-container {
+    background: #1e1e1e;
+}
+
+body.dark li {
+  background-color: #2a2a2a;
+}
+
+body.dark input {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+body.dark button{
+    background: #333;
+    color: white;
+}
+
+body.dark #addBtn {
+    background: white;
+    color: black;
+}
+
+body.dark .filters button.active {
+    background: white;
+    color: black;
+}
+
+/* Header polish */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
