@@ -28,4 +28,4 @@ A minimalist and interactive To-Do App built with JavaScript.
 (Optional: add screenshot later)
 
 ## 🔗 Live Demo
-(Will add with GitHub Pages)
+https://yourusername.github.io/todo-app/
